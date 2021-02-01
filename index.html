@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar  navbar-light">
             <div class="container-fluid" style="z-index: 2;">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" id="siteLogo" href="">
                     <img src="https://www.mindinventory.com/static/media/logo-mind-inventory-w.3fdeb6b6.svg"
                         class="img-fluid" width="100" height="100" alt="#">
                 </a>
@@ -112,8 +112,8 @@
                                 </ul>
                             </div>
                             <!-- Web developement -->
-                            <div class="tab-pane fade position-absolute" id="v-pills-profile-web-dev" role="tabpanel"
-                                aria-labelledby="v-pills-profile-web-dev-tab" style="top: 25%;">
+                            <div class="tab-pane fade" id="v-pills-profile-web-dev" role="tabpanel"
+                                aria-labelledby="v-pills-profile-web-dev-tab" style="padding-top: 8rem;">
                                 <div class="text-start">
                                     <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
                                     <a class="fs-4 fw-bolder right-tab-title" href="#">Web developement</a>
@@ -222,8 +222,8 @@
                                 </ul>
                             </div>
                             <!-- Hire developers -->
-                            <div class="tab-pane fade position-absolute" id="v-pills-hire-dev" role="tabpanel"
-                                aria-labelledby="v-pills-hire-dev-tab" style="top: 25%;">
+                            <div class="tab-pane fade" id="v-pills-hire-dev" role="tabpanel"
+                                aria-labelledby="v-pills-hire-dev-tab" style="padding-top: 8rem;">
                                 <div class="text-start">
                                     <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
                                     <a class="fs-4 fw-bolder right-tab-title" href="#">Hire developers</a>
@@ -309,6 +309,11 @@
             </div>
         </section>
     </main>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <!-- Bootstrap CDN scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"

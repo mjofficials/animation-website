@@ -178,10 +178,7 @@ a:focus {
   padding: 0;
   margin: 0 auto;
   overflow: hidden;
-  transition: 0.5s;
   z-index: -1;
-  transform: translateY(100%);
-  transform: translateY(10%);
 }
 .nav-link.active::after {
   width: 0;
@@ -202,6 +199,7 @@ a:focus {
 .right-tab-icon {
   color: #4e43b7;
 }
+.left-tab-title:hover,
 .left-tab-title.active {
   color: aqua !important;
 }
