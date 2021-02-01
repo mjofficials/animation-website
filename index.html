@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mind-inventory</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- Material Lite CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar  navbar-light">
+            <div class="container-fluid" style="z-index: 2;">
+                <a class="navbar-brand" href="">
+                    <img src="https://www.mindinventory.com/static/media/logo-mind-inventory-w.3fdeb6b6.svg"
+                        class="img-fluid" width="100" height="100" alt="#">
+                </a>
+                <ul class="navbar-nav navbar-ul" id="navBarUl">
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Career</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Sitemap</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Contact us</a></li>
+                </ul>
+                <button
+                    class="mdl-button mdl-js-button mdl-js-ripple-effect rounded-pill text-light fw-bolder navbar-pill-btn">
+                    Inquire Now
+                </button>
+                <div id="menuToggle">
+                    <input id="hamCheckBox" type="checkbox" onclick="hamMenuToggle()" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+                <!-- Overlay content -->
+                <div class="container-fluid overlay-content">
+                    <div class="right-bg"></div>
+                    <div class="row d-flex align-items-center justify-content-center" style="height: 100vh;">
+                        <div class="col-lg-6 nav flex-column nav-pills m-0 p-0" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical" style="width: calc(89% / 2);">
+                            <a class="left-tab-title nav-link active text-light text-end fs-2 fw-bolder position-relative me-3"
+                                id="v-pills-app-dev-tab" data-bs-toggle="pill" href="#v-pills-app-dev" role="tab"
+                                aria-controls="v-pills-app-dev" aria-selected="true">App
+                                developement</a>
+                            <a class="left-tab-title nav-link text-light text-end fs-2 fw-bolder position-relative me-3"
+                                id="v-pills-profile-web-dev-tab" data-bs-toggle="pill" href="#v-pills-profile-web-dev"
+                                role="tab" aria-controls="v-pills-profile-web-dev" aria-selected="false">Web
+                                developement</a>
+                            <a class="left-tab-title nav-link text-light text-end fs-2 fw-bolder position-relative me-3"
+                                id="v-pills-our-work-tab" data-bs-toggle="pill" href="#v-pills-our-work" role="tab"
+                                aria-controls="v-pills-our-work" aria-selected="false">Our work</a>
+                            <a class="left-tab-title nav-link text-light text-end fs-2 fw-bolder position-relative me-3"
+                                id="v-pills-enterprise-dev-tab" data-bs-toggle="pill" href="#v-pills-enterprise-dev"
+                                role="tab" aria-controls="v-pills-enterprise-dev" aria-selected="false">Enterprise app
+                                developement</a>
+                            <a class="left-tab-title nav-link text-light text-end fs-2 fw-bolder position-relative me-3"
+                                id="v-pills-hire-dev-tab" data-bs-toggle="pill" href="#v-pills-hire-dev" role="tab"
+                                aria-controls="v-pills-hire-dev" aria-selected="false">Hire developers</a>
+                            <a class="left-tab-title nav-link text-light text-end fs-2 fw-bolder position-relative me-3"
+                                id="v-pills-about-company-tab" data-bs-toggle="pill" href="#v-pills-about-company"
+                                role="tab" aria-controls="v-pills-about-company" aria-selected="false">About company</a>
+                        </div>
+                        <div class="col-lg-5 tab-content ms-5" id="v-pills-tabContent">
+                            <!-- App developement -->
+                            <div class="tab-pane fade show active" id="v-pills-app-dev" role="tabpanel"
+                                aria-labelledby="v-pills-app-dev-tab">
+                                <div class="text-start">
+                                    <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
+                                    <a class="fs-4 fw-bolder right-tab-title" href="#">App
+                                        developement</a>
+                                </div>
+                                <ul class="d-flex row flex-row text-start">
+                                    <li class="col-4 fw-bolder px-3 py-4 d-block w-25"><i
+                                            class="fab fa-apple fa-2x right-tab-icon"></i><br>iPhone app
+                                        developement
+                                    </li>
+                                    <li class="col-4 p fw-bolder x-3 py-4 d-block w-25"><i
+                                            class="fab fa-android fa-2x right-tab-icon"></i><br>Android
+                                        app
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>iPad
+                                        app
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>iPad
+                                        app
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>iPad
+                                        app
+                                        developement
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Web developement -->
+                            <div class="tab-pane fade position-absolute" id="v-pills-profile-web-dev" role="tabpanel"
+                                aria-labelledby="v-pills-profile-web-dev-tab" style="top: 25%;">
+                                <div class="text-start">
+                                    <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
+                                    <a class="fs-4 fw-bolder right-tab-title" href="#">Web developement</a>
+                                </div>
+                                <ul class="d-flex row flex-row text-start">
+                                    <li class="col-4 fw-bolder px-3 py-4 d-block w-25"><i
+                                            class="fab fa-angular fa-2x right-tab-icon"></i><br>Angular js
+                                        developement
+                                    </li>
+                                    <li class="col-4 p fw-bolder x-3 py-4 d-block w-25"><i
+                                            class="fab fa-node fa-2x right-tab-icon"></i><br>Node.js
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-php fa-2x right-tab-icon"></i><br>PHP
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-laravel fa-2x right-tab-icon"></i><br>Laravel
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-joomla fa-2x right-tab-icon"></i><br>Joomla
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-magento fa-2x right-tab-icon"></i><br>Magento
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-wordpress fa-2x right-tab-icon"></i><br>Wordpress
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-drupal fa-2x right-tab-icon"></i><br>Drupal
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-tablet-alt fa-2x right-tab-icon"></i><br>CakePHP
+                                        developement
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Our work -->
+                            <div class="tab-pane fade" id="v-pills-our-work" role="tabpanel"
+                                aria-labelledby="v-pills-our-work-tab">
+                                <div class="text-start">
+                                    <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
+                                    <a class="fs-4 fw-bolder right-tab-title" href="#">Our work</a>
+                                </div>
+                                <ul class="d-flex row flex-row text-start">
+                                    <li class="col-4 fw-bolder px-3 py-4 d-block w-25"><i
+                                            class="fab fa-apple fa-2x right-tab-icon"></i><br>iPhone app
+                                        developement
+                                    </li>
+                                    <li class="col-4 p fw-bolder x-3 py-4 d-block w-25"><i
+                                            class="fab fa-android fa-2x right-tab-icon"></i><br>Android
+                                        app
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>iPad
+                                        app
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>iPad
+                                        app
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>iPad
+                                        app
+                                        developement
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Enterprise app developement -->
+                            <div class="tab-pane fade" id="v-pills-enterprise-dev" role="tabpanel"
+                                aria-labelledby="v-pills-enterprise-dev-tab">
+                                <div class="text-start">
+                                    <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
+                                    <a class="fs-4 fw-bolder right-tab-title" href="#">Enterprise app developement</a>
+                                </div>
+                                <ul class="d-flex row flex-row text-start">
+                                    <li class="col-4 fw-bolder px-3 py-4 d-block w-25"><i
+                                            class="fas fa-tasks fa-2x right-tab-icon"></i><br>Customer order management
+                                        apps
+                                    </li>
+                                    <li class="col-4 p fw-bolder x-3 py-4 d-block w-25"><i
+                                            class="fas fa-utensils fa-2x right-tab-icon"></i><br>Food ordering apps for
+                                        restaurants
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-store fa-2x right-tab-icon"></i><br>Mobile apps for
+                                        retailers
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-calculator fa-2x right-tab-icon"></i><br>Mobile POS
+                                        developement
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-map-marker-alt fa-2x right-tab-icon"></i><br>Location tracking
+                                        apps
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Hire developers -->
+                            <div class="tab-pane fade position-absolute" id="v-pills-hire-dev" role="tabpanel"
+                                aria-labelledby="v-pills-hire-dev-tab" style="top: 25%;">
+                                <div class="text-start">
+                                    <i class="fas fa-external-link-alt fa-1x right-tab-icon"></i>
+                                    <a class="fs-4 fw-bolder right-tab-title" href="#">Hire developers</a>
+                                </div>
+                                <ul class="d-flex row flex-row text-start">
+                                    <li class="col-4 fw-bolder px-3 py-4 d-block w-25"><i
+                                            class="fab fa-apple fa-2x right-tab-icon"></i><br>Hire iPhone app developer
+                                    </li>
+                                    <li class="col-4 p fw-bolder x-3 py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>Hire iPad
+                                        app developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-android fa-2x right-tab-icon"></i><br>Hire
+                                        android developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>Hire
+                                        ionic developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-angular fa-2x right-tab-icon"></i><br>Hire
+                                        angularjs developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-node fa-2x right-tab-icon"></i><br>Hire
+                                        nodejs developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-php fa-2x right-tab-icon"></i><br>Hire
+                                        PHP developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-tablet-alt fa-2x right-tab-icon"></i><br>Hire
+                                        zend developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-magento fa-2x right-tab-icon"></i><br>Hire
+                                        magento developer
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fab fa-joomla fa-2x right-tab-icon"></i><br>Hire
+                                        joomla developer
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- About company -->
+                            <div class="tab-pane fade" id="v-pills-about-company" role="tabpanel"
+                                aria-labelledby="v-pills-about-company-tab">
+                                <ul class="d-flex row flex-row text-start">
+                                    <li class="col-4 fw-bolder px-3 py-4 d-block w-25"><i
+                                            class="fas fa-briefcase fa-2x right-tab-icon"></i><br>Company overview
+                                    </li>
+                                    <li class="col-4 p fw-bolder x-3 py-4 d-block w-25"><i
+                                            class="fas fa-cogs fa-2x right-tab-icon"></i><br>Our developement
+                                        methodology
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="fas fa-file-alt fa-2x right-tab-icon"></i><br>Our Engagement Models
+                                    </li>
+                                    <li class="col-4 px-3 fw-bolder py-4 d-block w-25"><i
+                                            class="far fa-comment-dots fa-2x right-tab-icon"></i><br>Testimonials
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bootstrap CDN scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <!-- Custom Js script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
