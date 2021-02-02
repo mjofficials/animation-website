@@ -8,7 +8,7 @@ body,
 main {
   padding: 0;
   margin: 0;
-  background-color: #f1f4ff;
+  background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -25,6 +25,16 @@ a:focus {
   box-shadow: none !important;
   outline: none !important;
 }
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99999;
+  background: rgb(146, 83, 192);
+}
+
 .navbar {
   padding-bottom: 0.01rem !important;
 }
@@ -202,4 +212,223 @@ a:focus {
 .left-tab-title:hover,
 .left-tab-title.active {
   color: aqua !important;
+}
+/* Multiscroll section */
+.left-column,
+.right-column {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-column {
+  background-color: #4e43b7;
+  color: #ffffff;
+}
+.right-column {
+  background-color: #ffffff;
+}
+
+.split-slideshow {
+  overflow-x: hidden !important;
+}
+
+.slideshow {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+.slideshow .slider {
+  width: 100vw;
+  height: 100vw;
+}
+.slideshow .slider * {
+  outline: none;
+}
+.slideshow .slider .item {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.slideshow .slider .item .text {
+  display: none;
+}
+.slideshow .slider .item img {
+  min-width: 101%;
+  min-height: 101%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.slideshow .slick-dots {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 33%;
+  left: 5%;
+  /* -webkit-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+  color: #fff;
+  display: block;
+}
+.slideshow .slick-dots li {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.slideshow .slick-dots li button {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  text-align: center;
+}
+.slideshow .slick-dots li button:before {
+  content: "";
+  background: #000;
+  color: #000;
+  height: 2px;
+  width: 20px;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
+  z-index: 100;
+}
+.slideshow .slick-dots li.slick-active button:before {
+  width: 40px;
+  opacity: 1;
+}
+.slideshow.slideshow-right {
+  left: 0;
+  width: 50vw;
+  pointer-events: none;
+  position: absolute !important;
+}
+.slideshow.slideshow-right .slider {
+  left: 0;
+  position: absolute;
+}
+
+.slideshow-text {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  width: 8%;
+  padding: 0.5rem 0;
+  text-align: start;
+  color: #fff;
+  background-color: crimson;
+  font-weight: 100;
+  pointer-events: none;
+  text-transform: uppercase;
+  z-index: 100;
+}
+@media (max-width: 767px) {
+  .slideshow-text {
+    font-size: 40px;
+  }
+}
+
+/* RIPPLE BLOCK */
+
+.ripple-block {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ripple-block i {
+  color: crimson;
+}
+.ripple-block i::before {
+  background-image: radial-gradient(circle, #fff 33%, transparent, transparent);
+}
+
+.ripple {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background: rgba(220, 20, 60, 0.555);
+  border-radius: 50%;
+  animation: ripple 2s ease-in-out infinite;
+  transition: background 2s ease;
+  z-index: -1;
+}
+
+.ripple-block .ripple-1 {
+  animation-delay: 3s;
+}
+
+.ripple-block .ripple-2 {
+  animation-delay: 5.6666666667s;
+}
+
+.ripple-block .ripple-3 {
+  animation-delay: 7.3333333333s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1em);
+    opacity: 0;
+  }
+}
+/* SECTION 2 */
+.cta-pill-btn {
+  background-color: crimson;
+}
+.cta-pill-btn:hover {
+  background-color: rgba(220, 20, 60, 0.5);
+}
+.sec1-content {
+  border-left-style: solid;
+  border-left-color: crimson;
+}
+/* SECTION 3 */
+.section3-card {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 250px;
+  height: 200px;
+  background-color: aqua;
+}
+.section3-card p:first-child {
+  color: #4e43b7;
+}
+/* SECTION 4 */
+.right-full-column {
+  color: #fff;
+  background-color: #4e43b7;
+  padding: 5rem 8rem;
 }
