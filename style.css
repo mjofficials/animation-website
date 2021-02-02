@@ -432,3 +432,35 @@ header {
   background-color: #4e43b7;
   padding: 5rem 8rem;
 }
+/* SECTION 12 */
+.section12-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 75%;
+  height: auto;
+  background-color: aqua;
+}
+.section12-card p:first-child {
+  color: #4e43b7;
+}
+.contact-group ul li,
+.follow-us-list,
+.copyright-list-item {
+  background: transparent;
+  border: none;
+}
+.contact-group ul li i {
+  color: aqua;
+}
+.follow-us-icons {
+  background-color: crimson;
+  font-size: 1em;
+  width: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+  color: #fff;
+  border-radius: 0.8em;
+}
