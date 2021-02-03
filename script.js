@@ -1,3 +1,4 @@
+// Navbar function
 function hamMenuToggle() {
     var menuCheckbox = document.getElementById('hamCheckBox');
 
@@ -45,10 +46,10 @@ $('.slideshow-left').slick({
     arrows: false,
     infinite: true,
     dots: true,
-    speed: 1000,
+    speed: 500,
     autoplay: true,
-    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    rtl: false
+    autoplaySpeed: 10000,
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
     if (currentSlide > nextSlide && nextSlide == 0 && currentSlide == maxItems - 1) {
@@ -83,7 +84,7 @@ $('.slideshow-right .slider').slick({
     vertical: true,
     arrows: false,
     infinite: true,
-    speed: 950,
+    speed: 500,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     initialSlide: maxItems - 1
 });
@@ -92,15 +93,38 @@ $('.slideshow-text').slick({
     vertical: true,
     arrows: false,
     infinite: true,
-    speed: 900,
+    speed: 500,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 });
+// add below code if you want to scroll split slider on mousescroll
+// .on("mousewheel", function (event) {
+//     event.preventDefault();
+//     if (event.deltaX > 0 || event.deltaY < 0) {
+//         $(this).slick('slickNext');
+//     } else if (event.deltaX < 0 || event.deltaY > 0) {
+//         $(this).slick('slickPrev');
+//     };
+// })
 
-    // .on("mousewheel", function (event) {
-    //     event.preventDefault();
-    //     if (event.deltaX > 0 || event.deltaY < 0) {
-    //         $(this).slick('slickNext');
-    //     } else if (event.deltaX < 0 || event.deltaY > 0) {
-    //         $(this).slick('slickPrev');
-    //     };
-    // })
+
+// svg animations
+
+// creating method for wait function
+TimelineLite.prototype.wait = function (position) {
+    return this.set({}, {}, position);
+};
+
+var splitSliderSvgTween = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+
+splitSliderSvgTween.fromTo('#cafeSvg', { x: 200, opacity: 0, ease: 'power3.in' }, { x: 0, opacity: 1 })
+    .wait("+=2")
+    .to('#cafeSvg', { x: -100, opacity: 0 })
+    .fromTo('#hospitalSvg', { x: 200, opacity: 0, ease: 'power3.in' }, { x: 0, opacity: 1 })
+    .wait("+=2")
+    .to('#hospitalSvg', { x: -100, opacity: 0 })
+    .fromTo('#cinemaSvg', { x: 200, opacity: 0, ease: 'power3.in' }, { x: 0, opacity: 1 })
+    .wait("+=2")
+    .to('#cinemaSvg', { x: -100, opacity: 0 })
+    .fromTo('#schoolSvg', { x: 200, opacity: 0, ease: 'power3.in' }, { x: 0, opacity: 1 })
+    .wait("+=2")
+    .to('#schoolSvg', { x: -100, opacity: 0 })
