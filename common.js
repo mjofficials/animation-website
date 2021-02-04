@@ -7293,7 +7293,7 @@ if (!self.__WB_pmw) {
             };
             (e.Defaults = {
                 nav: !1,
-                navText: ["<i class='icon-leftarrow'></i>", "<i class='icon-rightarrow'></i>"],
+                navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
                 navSpeed: !1,
                 navElement: "div",
                 navContainer: !1,

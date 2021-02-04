@@ -178,6 +178,27 @@ html {
   color: rgba(255, 255, 255, 0.8);
 }
 /**/
+/** SVG ANIMATION **/
+.svg-image-div {
+  background-image: url(svg-images/ground-net.png);
+  background-size: contain;
+  width: 30vw;
+  height: auto;
+  border-radius: 100%;
+  padding: 3rem;
+  box-shadow: inset 0px 0px 20px 20px rgb(255 255 255);
+}
+#hospitalSvg,
+#cinemaSvg,
+#schoolSvg {
+  width: 25vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .intro-banner-vdo-play-btn {
   height: 60px;
   width: 60px;
@@ -190,7 +211,7 @@ html {
   z-index: 1;
 }
 .intro-banner-vdo-play-btn i {
-  line-height: 56px;
+  line-height: 60px;
   font-size: 30px;
 }
 .intro-banner-vdo-play-btn .ripple {
@@ -238,19 +259,6 @@ html {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
-/**/
-.industriesbannerwrapper {
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  margin: 0 auto;
-}
-.industriesbannerwrapper canvas {
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-/**/
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   #intro-carousel .col-lg-6.col-lg-offset-3 {
     width: 66.66666667%;
@@ -284,9 +292,6 @@ html {
   }
   .mi-services-anim svg {
     width: 100%;
-  }
-  #industriesbanner {
-    max-width: 300px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -396,12 +401,6 @@ html {
     width: 50%;
     float: left;
   }
-  #mobileservices {
-    margin-bottom: 40px;
-  }
-  #webservices {
-    margin: 40px 0;
-  }
   .home-srvc-itm a {
     padding: 20px;
   }
@@ -446,21 +445,6 @@ html {
 
 .services .col-md-6:last-child {
   padding-left: 30px;
-}
-
-.mobileServicesCanvas {
-  position: relative;
-}
-
-.mobileServicesCanvas:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #4500b7;
-  width: 100%;
-  height: 300px;
-  z-index: -1;
 }
 
 @media only screen and (max-width: 991px) {
@@ -543,21 +527,6 @@ html {
 
 .services .col-md-6:last-child {
   padding-left: 30px;
-}
-
-.webServicesCanvas {
-  position: relative;
-}
-
-.webServicesCanvas:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #4500b7;
-  width: 100%;
-  height: 300px;
-  z-index: -1;
 }
 
 @media only screen and (max-width: 991px) {
@@ -2611,7 +2580,7 @@ body.active-menu {
   margin: 0;
   max-height: calc(100vh - 160px);
   /*max-height: 100%;*/
-  overflow: auto;
+  overflow: hidden;
 }
 
 .menu-left ul li {
